@@ -51,6 +51,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/system/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/system/product/media/audio/alarms/Xperia_alarm.ogg:system/product/media/audio/alarms/Xperia_alarm.ogg \
+    $(DEVICE_PATH)/system/product/media/audio/notifications/Notification.ogg:system/product/media/audio/notifications/Notification.ogg \
+    $(DEVICE_PATH)/system/product/media/audio/notifications/Notification_H.ogg:system/product/media/audio/notifications/Notification_H.ogg \
+    $(DEVICE_PATH)/system/product/media/audio/ringtones/Ringer.ogg:system/product/media/audio/ringtones/Ringer.ogg \
+    $(DEVICE_PATH)/system/product/media/audio/ringtones/air.ogg:system/product/media/audio/ringtones/air.ogg
+
 PRODUCT_PACKAGES += \
     getSPL
 

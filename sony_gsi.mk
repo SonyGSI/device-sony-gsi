@@ -15,6 +15,13 @@
 
 PRODUCT_ADB_KEYS := ${HOME}/.android/adbkey.pub
 
+# Xperia media must come before device includes
+PRODUCT_PRODUCT_PROPERTIES := \
+ro.config.alarm_alert=Xperia_alarm.ogg \
+ro.config.notification_sound=Notification.ogg \
+ro.config.ringtone=Ringer.ogg \
+ro.config.ringtone2=air.ogg
+
 # GSI for system/product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/legacy_gsi_common.mk)
