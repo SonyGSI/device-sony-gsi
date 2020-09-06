@@ -1,2 +1,4 @@
-# ro.build.noisrev.   u:object_r:gsi_prop:s0
-ro.tcudorp.         u:object_r:gsi_prop:s0
+# ro.build.noisrev.           u:object_r:gsi_prop:s0
+ro.tcudorp.                   u:object_r:gsi_prop:s0
+
+wifi.active.interface         u:object_r:exported_wifi_prop:s0
