@@ -18,6 +18,8 @@ DEVICE_PATH := device/sony/gsi
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
+
 # Copy different zygote settings for vendor.img to select by setting property
 # ro.zygote=zygote64_32 or ro.zygote=zygote32_64:
 #   1. 64-bit primary, 32-bit secondary OR
