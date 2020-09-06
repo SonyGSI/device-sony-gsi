@@ -1,0 +1,46 @@
+type gsi, domain;
+type gsi_exec, system_file_type, exec_type, file_type;
+type gsi_file, system_file_type, file_type;
+type gsi_tmpfs, file_type;
+
+# We use previleged commands that trigger neverallow
+typeattribute gsi coredomain;
+
+init_daemon_domain(gsi)
+tmpfs_domain(gsi);
+
+# Mounts a tmpfs to /gsi
+allow gsi tmpfs:dir { create_dir_perms relabelfrom };
+allow gsi gsi_tmpfs:file { create_file_perms relabelfrom };
+
+# Read the boot image, system and vendor files
+allow gsi boot_block_device:blk_file r_file_perms;
+allow gsi vendor_file:file r_file_perms;
+
+# We copy files from /system/etc/gsi to /gsi keeping the selinux context
+# allow gsi system_file:dir r_dir_perms;
+allow gsi system_file:file w_file_perms;
+
+# Mount GSI files over system and vendor files
+allow gsi system_file:dir { mounton relabelto relabelfrom };
+allow gsi system_file:file { mounton relabelto };
+allow gsi system_lib_file:file { mounton relabelto };
+allow gsi vendor_file:file { mounton relabelto };
+
+# Execute our shell scripts
+allow gsi spl_exec:file rx_file_perms;
+allow gsi shell_exec:file rx_file_perms;
+allow gsi toolbox_exec:file rx_file_perms;
+
+# Magisk is used to rewrite props
+allow gsi magisk_exec:file rx_file_perms;
+
+# Get props
+get_prop(gsi, default_prop)
+
+# Set our override props
+set_prop(gsi, gsi_prop)
+set_prop(gsi, fingerprint_prop)
+
+# TODO: Remove permissive
+permissive gsi;

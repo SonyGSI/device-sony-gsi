@@ -1,0 +1,8 @@
+type spl, domain;
+type spl_exec, system_file_type, exec_type, file_type;
+
+# We use previleged commands that trigger neverallow
+typeattribute spl coredomain;
+
+# TODO: Remove permissive
+permissive spl;

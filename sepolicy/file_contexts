@@ -1,0 +1,13 @@
+/gsi                            u:object_r:gsi_tmpfs:s0
+
+/system/bin/getSPL              u:object_r:spl_exec:s0
+/system/bin/gsi.(.*).sh         u:object_r:gsi_exec:s0
+
+/sbin/magisk                    u:object_r:magisk_exec:s0
+/sbin/magiskhide                u:object_r:magisk_exec:s0
+/sbin/resetprop                 u:object_r:magisk_exec:s0
+/sbin/su                        u:object_r:magisk_exec:s0
+
+/sbin/magiskinit64              u:object_r:magisk_exec:s0
+/sbin/magiskpolicy              u:object_r:magisk_exec:s0
+/sbin/supolicy                  u:object_r:magisk_exec:s0

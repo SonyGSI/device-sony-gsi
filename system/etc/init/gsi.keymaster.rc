@@ -1,0 +1,3 @@
+# Fix keymaster SPL on system blobs to match bootloader values
+on post-fs
+    exec - root -- /system/bin/gsi.keymaster.sh

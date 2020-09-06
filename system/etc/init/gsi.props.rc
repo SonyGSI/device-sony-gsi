@@ -1,0 +1,3 @@
+# Reset system props with vendor values
+on post-fs
+    exec - root -- /system/bin/gsi.props.sh

@@ -1,0 +1,3 @@
+# Currently all QCOM devices need this bluetooth fix
+on property:ro.bluetooth.library_name=libbluetooth_qti.so
+    exec - root -- /system/bin/gsi.bluetooth.sh

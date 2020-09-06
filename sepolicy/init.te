@@ -1,0 +1,1 @@
+allow init gsi_tmpfs:dir mounton;

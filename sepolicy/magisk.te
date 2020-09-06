@@ -1,0 +1,8 @@
+type magisk, domain;
+type magisk_exec, system_file_type, exec_type, file_type;
+
+# We use previleged commands that trigger neverallow
+typeattribute magisk coredomain;
+
+# TODO: Remove permissive
+permissive magisk;

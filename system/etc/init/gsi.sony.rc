@@ -1,0 +1,3 @@
+# Currently doesn't do anything
+on post-fs && property:ro.product.vendor.manufacturer=Sony
+    exec - root -- /system/bin/gsi.sony.sh

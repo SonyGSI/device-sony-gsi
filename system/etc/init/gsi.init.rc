@@ -1,0 +1,4 @@
+# Dedicated tmpfs for all GSI fixes
+# Created early so other scripts can depend on it
+on init
+    mount tmpfs tmpfs /gsi mode=0755,gid=0
