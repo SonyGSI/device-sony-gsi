@@ -56,3 +56,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     Stk
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    SettingsFingerprintYoshino \
+    SettingsFingerprintTama \
+    SettingsFingerprintSeine
