@@ -64,6 +64,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Stk
 
+# Android
+PRODUCT_PACKAGES += \
+    AndroidH8216 \
+    AndroidXQAU52
+
+# SystemUI
+PRODUCT_PACKAGES += \
+    SystemUIXQAU52
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     SettingsFingerprintYoshino \
